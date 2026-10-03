@@ -6,22 +6,30 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+    paths: [".github/**"]
+
+permissions:
+  contents: write
 
 jobs:
-  github-metrics:
+  metrics:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: DannieDev
-          filename: github-metrics.svg
-          template: classic
-          base: header, activity, community
-          config_timezone: America/Mexico_City
-          config_display: regular
-          repositories_affiliations: owner, collaborator, organization_member
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          python-version: "3.12"
+
+      - name: Generar tarjeta
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GH_USER: DannieDev
+        run: python .github/scripts/metrics.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          git diff --cached --quiet || (git commit -m "Actualizar métricas del perfil" && git push)

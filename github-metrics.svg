@@ -2,11 +2,11 @@
 <style>.f{opacity:0;animation:in .6s ease forwards}@keyframes in{to{opacity:1}}</style>
 <rect x="0.5" y="0.5" width="839" height="329" rx="12" fill="#0D1117" stroke="#30363D"/>
 <text x="28" y="44" font-size="20" font-weight="700" fill="#58A6FF">Daniel Mendoza · Actividad en GitHub</text>
-<text x="812" y="44" font-size="12" fill="#8B949E" text-anchor="end">Actualizado 03/10/2026</text>
+<text x="812" y="44" font-size="12" fill="#8B949E" text-anchor="end">Actualizado 04/10/2026</text>
 <g class="f" style="animation-delay:0.00s">
 <rect x="28" y="66" width="186" height="92" rx="10" fill="#161B22" stroke="#30363D"/>
 <rect x="28" y="82" width="3" height="60" rx="1.5" fill="#58A6FF"/>
-<text x="46" y="106" font-size="26" font-weight="700" fill="#E6EDF3">138</text>
+<text x="46" y="106" font-size="26" font-weight="700" fill="#E6EDF3">139</text>
 <text x="46" y="128" font-size="13" font-weight="600" fill="#58A6FF">Commits totales</text>
 <text x="46" y="145" font-size="11" fill="#8B949E">desde 2024, incluye privados</text>
 </g>
@@ -20,7 +20,7 @@
 <g class="f" style="animation-delay:0.24s">
 <rect x="428" y="66" width="186" height="92" rx="10" fill="#161B22" stroke="#30363D"/>
 <rect x="428" y="82" width="3" height="60" rx="1.5" fill="#58A6FF"/>
-<text x="446" y="106" font-size="26" font-weight="700" fill="#E6EDF3">1,264</text>
+<text x="446" y="106" font-size="26" font-weight="700" fill="#E6EDF3">1,265</text>
 <text x="446" y="128" font-size="13" font-weight="600" fill="#58A6FF">Contribuciones</text>
 <text x="446" y="145" font-size="11" fill="#8B949E">en el último año</text>
 </g>
